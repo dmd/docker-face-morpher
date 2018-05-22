@@ -1,5 +1,5 @@
 # face-morpher
-This container is a read-to-go docker image for trying out @alyssaq's open source [face-morpher](https://github.com/alyssaq/face_morpher) library. Since it took me forever to get it working, here are all the dependencies ready made for you.
+This container is a read-to-go docker image for trying out @alyssaq's open source [face-morpher](https://github.com/alyssaq/face_morpher) library. Since it took me forever to get it working, here are all the dependencies ready made for you. Also, here's a link to the [docker hub](https://hub.docker.com/r/mohonrid/face-morpher/).
 
 The image contains the following necessary libraries:
 - python - 2.7.15
