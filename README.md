@@ -25,7 +25,14 @@ You don't need the -v argument but I did because I want to supply pictures to th
 facemorpher --src=ARG1 --dest=ARG2 --out_video=full.avi && ffmpeg -y -i full.avi -ss 00:00:00.05 -t 00:00:01.85 trim.mp4 && ffmpeg -y -i trim.mp4 -vf reverse rev.mp4 && ffmpeg -y -f concat -i inputs.txt -c copy loop.mp4 && ffmpeg -y -i loop.mp4 -f image2pipe -vcodec ppm - | convert -delay 5 -loop 0 - output.gif
 ```
 
-Replace ARG1 & ARG2 with the image or path to the image. This, coupled with the fact that I will be building on top of this to make a webserver, is why I included ffmpeg, imagemagick, & node.
+Replace ARG1 & ARG2 with the image or path to the image. This also assumes you have a file in the working directory called inputs.txt and has the following contents:
+
+```
+file 'trim.mp4'
+file 'rev.mp4'
+```
+
+This, coupled with the fact that I will be building on top of this to make a webserver, is why I included ffmpeg, imagemagick, & node.
 
 I do suggest you upscale and low resolution images. If your image is too small, this library has a hard time recognizing it, but if you upscale it to some bigger resolution, it seams to work alright. Also, this should be obvious, but try to use images with similar lighting and people looking in the same direction.
 
